@@ -4,6 +4,8 @@ The portfolio for __Language Analytics S22__ consists of 5 projects (4 class ass
 ## 1. Contribution
 The initial assignment was made partly in collaboration with others from the course, but the final code is my own. I made several adjustments to the code since I first handed it in.
 
+https://towardsdatascience.com/customizing-networkx-graphs-f80b4e69bedf
+
 ## 2. Assignment description by Ross
 ### Main task
 In this assignment, you are going to write a ```.py``` script which can be used for network analysis. As we saw last week, pretty much anything can be formalised as a network. We're not going to focus on creating the edgelists for this project; instead, the goal is to have a script that would work the same way on _any_ input data, as long as the input format is correct. 
