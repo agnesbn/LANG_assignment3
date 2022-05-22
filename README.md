@@ -23,7 +23,7 @@ Your script should do the following:
   - Save a separate visualisation and CSV for each file
 
 ### Bonus task
-- ```networkx``` offers a range of different plotting algorithms. Select a few of these and all the user to decide between different options.
+- ```networkx``` offers a range of different plotting algorithms. Select a few of these and allow the user to decide between different options.
 
 ## 3. Methods
 ### Main task
