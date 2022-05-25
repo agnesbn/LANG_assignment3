@@ -50,8 +50,11 @@ pip install pandas numpy networkx
 
 
 __Input:__
-https://matplotlib.org/stable/api/markers_api.html#module-matplotlib.markers
+markers:https://matplotlib.org/stable/api/markers_api.html#module-matplotlib.markers
 
+font weight:https://matplotlib.org/stable/tutorials/text/text_props.html
+
+colours:https://matplotlib.org/stable/gallery/color/named_colors.html.
 ### Main task
 
 
