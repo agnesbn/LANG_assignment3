@@ -47,6 +47,11 @@ pip install pandas numpy networkx
 
 ### Get the data
 
+
+
+__Input:__
+https://matplotlib.org/stable/api/markers_api.html#module-matplotlib.markers
+
 ### Main task
 
 
