@@ -66,8 +66,7 @@ colours:https://matplotlib.org/stable/gallery/color/named_colors.html.
 
 
 
-**Network 1H4**                          |  **Network 1H6**
-:---------------------------------------:|:---------------------------------------:
+-----------------------------------------|--------------------------------
 ![](out/plots/network_1H4.png)           |  ![](out/plots/network_1H6.png)       
 **Network 2H4**                          |  **Network 2H6**
 ![](out/plots/network_2H4.png)           |  ![](out/plots/network_2H6.png)
