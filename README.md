@@ -70,16 +70,12 @@ colours:https://matplotlib.org/stable/gallery/color/named_colors.html.
 :---------------------------------------:|:---------------------------------------:
 ![](out/plots/network_1H4.png)           |  ![](out/plots/network_1H6.png)       
 **Network 2H4**                          |  **Network 2H6**
-:---------------------------------------:|:---------------------------------------:
 ![](out/plots/network_2H4.png)           |  ![](out/plots/network_2H6.png)
 **Network 3H6**                          |  **Network H5**
-:---------------------------------------:|:---------------------------------------:
 ![](out/plots/network_3H6.png)           |  ![](out/plots/network_H5.png)
 **Network H8**                           |  **Network KJ**
-:---------------------------------------:|:---------------------------------------:
 ![](out/plots/network_H8.png)            |  ![](out/plots/network_KJ.png)       
-**Network R2**                            |  **Network_R3**
-:---------------------------------------:|:---------------------------------------:
+**Network R2**                           |  **Network_R3**
 ![](out/plots/network_R2.png)            |  ![](out/plots/network_R3.png)       
 
 
