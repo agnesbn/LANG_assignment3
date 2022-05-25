@@ -17,21 +17,85 @@ import matplotlib.pyplot as plt
 # Argument parser
 def parse_args():
     ap = argparse.ArgumentParser()
+    """ 
+    Data loading arguments 
+    """
     # filename argument
     ap.add_argument("-f", 
                     "--filename", 
+                    type=str,
                     required = False, 
                     help = "The file you want to work with")
     # directory argument
     ap.add_argument("-d",
                     "--directory_name",
+                    type=str,
                     required = False,
                     help = "The directory you want to work within")
+    
+    """ 
+    Data saving argument 
+    """
     # sort CSV by...
     ap.add_argument("-s",
                     "--sort_csv_by",
+                    type=str,
                     default = "degree_centrality",
                     help = "The centrality metric you wish to sort the data by, 'degree_centrality', 'eigenvector_centrality', or 'betweenness_centrality'")
+    
+    """
+    Network plotting arguments
+    """
+    # node colour argument
+    ap.add_argument("-n",
+                    "--node_color",
+                    default = "orange",
+                    help = "The colour of the nodes in the network plot")
+    # node edge colour arguement
+    ap.add_argument("-c",
+                    "--edgecolors",
+                    default = "saddlebrown",
+                    help = "The colour of the edge of the nodes in the network plot")
+    # edge colour arguement
+    ap.add_argument("-e",
+                    "--edge_color",
+                    default = "dimgrey",
+                    help = "The colour of the edges (i.e. lines between nodes) in the network plot")
+    # node shape arguement
+    ap.add_argument("-o",
+                    "--node_shape",
+                    type=str,
+                    default = "$\u2B2C$",
+                    help = "The shape of the nodes, see documentation for matplotlib.markers to see different possibilities for marker shapes")
+    # node size argument
+    ap.add_argument("-z",
+                    "--node_size",
+                    type=int,
+                    default = 2700,
+                    help = "The size of the nodes")
+    # edge line width argument
+    ap.add_argument("-w",
+                    "--width",
+                    default = 1,
+                    type=float,
+                    help = "The line width of the edges")
+    # font size argument
+    ap.add_argument("-t",
+                    "--font_size",
+                    type=float,
+                    default = 8,
+                    help = "The size of the font")
+    # font weight argument
+    ap.add_argument("-i",
+                    "--font_weight",
+                    default = "heavy",
+                    help = "The weight of the font")
+    # node distance argument
+    ap.add_argument("-k",
+                    "--node_distance",
+                    type=float,
+                    default = 0.9,
+                    help = "The distance between nodes")
     args = vars(ap.parse_args())
     return args
 
@@ -70,26 +134,26 @@ def read_the_csv(path):
     return data
 
 # Edgelist visualisation
-def visualisation(data, filename):
+def visualisation(data, filename, node_color, edgecolors, edge_color, node_shape, node_size, width, font_size, font_weight, node_distance):
     # create figure
     fig, ax = plt.subplots(1, 1, figsize=(12, 10));
     fig.tight_layout()
     # create graph from pandas edgelist
     G = nx.from_pandas_edgelist(data, "Source", "Target", ["Weight"], create_using=nx.Graph())
     # positioning method (Fruchterman-Reingold force-directed algorithm)
-    pos = nx.spring_layout(G, k=0.9)
+    pos = nx.spring_layout(G, k=node_distance)
     # draw the network
     nx.draw_networkx(G, # NetworkX graph
                      ax=ax, # axes
                      pos=pos, # node positions
-                     node_size=2700, # size of nodes
-                     node_color="orange", # fill colour of nodes
-                     edgecolors = "saddlebrown", # edge colour of nodes
-                     edge_color="dimgrey", # colour of edges
-                     node_shape="$\u2B2C$", # node shape = horisontal ellipse
-                     width=1, # line width of edges
-                     font_size=8, # font size of names
-                     font_weight="bold") # font style
+                     node_size=node_size, # size of nodes
+                     node_color=node_color, # fill colour of nodes
+                     edgecolors=edgecolors, # edge colour of nodes
+                     edge_color=edge_color, # colour of edges
+                     node_shape=node_shape, # node shape = horisontal ellipse
+                     width=width, # line width of edges
+                     font_size=font_size, # font size of names
+                     font_weight=font_weight) # font style
     # add title
     plt.title(f"Network Analysis – {filename}", fontsize=24)
     # specify outpath
@@ -132,7 +196,17 @@ def csv_node(data, filename, centrality_metric):
 def main():
     # parse arguments
     args = parse_args()
+    # get arguments
     centrality_metric = args['sort_csv_by']
+    node_color = args["node_color"]
+    edgecolors = args["edgecolors"]
+    edge_color = args["edge_color"]
+    node_shape = args["node_shape"]
+    node_size = args["node_size"]
+    width = args["width"]
+    font_size = args["font_size"]
+    font_weight = args["font_weight"]
+    node_distance = args["node_distance"]
     # if filename argument is given and ends with "-csv"
     if args["filename"] is not None and args["filename"].endswith(".csv"):
         # get filename
@@ -142,7 +216,7 @@ def main():
         # read the file
         data = read_the_csv(path)
         # make and save network visualisation
-        visualisation(data, filename)
+        visualisation(data, filename, node_color, edgecolors, edge_color, node_shape, node_size, width, font_size, font_weight, node_distance)
         # create and save output CSV
         csv_node(data, filename, centrality_metric)
     # otherwise, if the directory argument is given
@@ -164,7 +238,7 @@ def main():
             # read the CSV
             data = read_the_csv(path)
             # make and save network visualisations
-            visualisation(data, filename)
+            visualisation(data, filename, node_color, edgecolors, edge_color, node_shape, node_size, width, font_size, font_weight, node_distance)
             # create and save output CSVs
             csv_node(data, filename, centrality_metric)
             # print message 
