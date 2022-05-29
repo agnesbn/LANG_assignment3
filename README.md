@@ -2,9 +2,7 @@
 The portfolio for __Language Analytics S22__ consists of 5 projects (4 class assignments and 1 self-assigned project). This is the __third assignment__ in the portfolio. 
 
 ## 1. Contribution
-The initial assignment was made partly in collaboration with others from the course, but the final code is my own. I made several adjustments to the code since I first handed it in.
-
-https://towardsdatascience.com/customizing-networkx-graphs-f80b4e69bedf
+The initial assignment was made partly in collaboration with others from the course, but the final code is my own. I made several adjustments to the code since I first handed it in. I found inspiration from [blog post](https://towardsdatascience.com/customizing-networkx-graphs-f80b4e69bedf)
 
 ## 2. Assignment description by Ross
 ### Main task
@@ -29,10 +27,10 @@ Your script should do the following:
 
 ## 3. Methods
 ### Main task
-
+The [network_analysis.py](https://github.com/agnesbn/LANG_assignment3/blob/main/src/network_analysis.py) script loads an edgelist, 
 
 ### Bonus task
-
+Adding a number of arguments with `argparse.ArgumentParser()` allows for the user to define a number of parameters for plotting the network, such as the colour of the nodes and their outline, the colour and width of the edges, the size and shape of the nodes, font size and weight, and the distance between the nodes. I also added an argument for the user to decide what centrality metric the output CSV should be sorted by.
 
 
 ## 4. Usage
@@ -41,12 +39,24 @@ Before running the script, you have to install the relevant packages. To do this
 ```
 sudo apt update
 pip install --upgrade pip
-# required packages
 pip install pandas numpy networkx 
 ```
 
 ### Get the data
+- The data should be provided to the examiner by Ross.
+- Place the data folder in the `in` folder so that the path is `in/network_data`.
 
+### Main task
+Make sure your current directory is the ´LANG_assignment3` folder. Then from the command line, run:
+```
+python src/network_analysis.py (--filename <FILENAME> --directory_name <DIRECTORY NAME>) (--sort_csv_by <CENTRALITY METRIC>) (--node_color <NODE COLOUR> --edgecolors <NODE OUTLINE COLOUR> --edge_color <EDGE COLOUR> --node_shape <NODE SHAPE> --node_size <NODE SIZE> --width <EDGE WIDTH> --font_size <FONT SIZE> --font_weight <FONT WEIGHT> --node_distance <NODE DISTANCE>)
+```
+
+__Data loading arguments__: Only put in one of these arguments!
+- <FILENAME>: The name of the CSV file, you want to work with, e.g. `1H4.csv`.
+- <DIRECTORY NAME>: The name of the directory of edgelists, you want to work with, e.g. `network_data`.
+  
+__Data saving arguement__
 
 
 __Input:__
@@ -55,8 +65,6 @@ markers:https://matplotlib.org/stable/api/markers_api.html#module-matplotlib.mar
 font weight:https://matplotlib.org/stable/tutorials/text/text_props.html
 
 colours:https://matplotlib.org/stable/gallery/color/named_colors.html.
-### Main task
-
 
 ### Bonus task
 
