@@ -46,7 +46,7 @@ pip install pandas numpy networkx
 - The data should be provided to the examiner by Ross.
 - Place the data folder in the `in` folder so that the path is `in/network_data`.
 
-### Main task
+### Main and bonus task
 Make sure your current directory is the ´LANG_assignment3` folder. Then from the command line, run:
 ```
 python src/network_analysis.py (--filename <FILENAME> --directory_name <DIRECTORY NAME>) 
