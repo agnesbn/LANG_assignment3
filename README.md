@@ -2,7 +2,7 @@
 The portfolio for __Language Analytics S22__ consists of 5 projects (4 class assignments and 1 self-assigned project). This is the __third assignment__ in the portfolio. 
 
 ## 1. Contribution
-The initial assignment was made partly in collaboration with others from the course, but the final code is my own. I made several adjustments to the code since I first handed it in. I found inspiration from this [blog post](https://towardsdatascience.com/customizing-networkx-graphs-f80b4e69bedf) to make the `NetworkX` plot more readable.
+The initial assignment was made partly in collaboration with others from the course, but the final code is my own. I made several adjustments to the code since I first handed it in. I found inspiration from this [blog post](https://towardsdatascience.com/customizing-networkx-graphs-f80b4e69bedf) to make the `NetworkX` plots more readable.
 
 ## 2. Assignment description by Ross
 ### Main task
