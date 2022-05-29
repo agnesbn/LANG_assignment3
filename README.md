@@ -58,7 +58,7 @@ python src/network_analysis.py (--filename <FILENAME> --directory_name <DIRECTOR
 __Data loading arguments__: Only put in one of these arguments!
 - `<FILENAME>`: The name of the CSV file, you want to work with, e.g. `1H4.csv`.
 - `<DIRECTORY NAME>`: The name of the directory of edgelists, you want to work with, e.g. `network_data`.
-- 
+
 __Data saving arguement__:
 - `<CENTRALITY METRIC>`: The centrality metric you wish for the output CSV to be sorted by. Put in `degree_centrality`, `eigenvector_centrality`, or `betweenness_centrality`. The default is `degree_centrality`.
 
