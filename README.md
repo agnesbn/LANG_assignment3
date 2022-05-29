@@ -50,25 +50,31 @@ pip install pandas numpy networkx
 Make sure your current directory is the ´LANG_assignment3` folder. Then from the command line, run:
 ```
 python src/network_analysis.py (--filename <FILENAME> --directory_name <DIRECTORY NAME>) 
-(--sort_csv_by <CENTRALITY METRIC>) 
-(--node_color <NODE COLOUR> --edgecolors <NODE OUTLINE COLOUR> --edge_color <EDGE COLOUR> --node_shape <NODE SHAPE> --node_size <NODE SIZE> --width <EDGE WIDTH> --font_size <FONT SIZE> --font_weight <FONT WEIGHT> --node_distance <NODE DISTANCE>)
+(--sort_csv_by <CENTRALITY METRIC>) (--node_color <NODE COLOUR> --edgecolors <NODE OUTLINE COLOUR> 
+--edge_color <EDGE COLOUR> --node_shape <NODE SHAPE> --node_size <NODE SIZE> --width <EDGE WIDTH> 
+--font_size <FONT SIZE> --font_weight <FONT WEIGHT> --node_distance <NODE DISTANCE>)
 ```
 
 __Data loading arguments__: Only put in one of these arguments!
 - `<FILENAME>`: The name of the CSV file, you want to work with, e.g. `1H4.csv`.
 - `<DIRECTORY NAME>`: The name of the directory of edgelists, you want to work with, e.g. `network_data`.
 - 
-__Data saving arguement__
+__Data saving arguement__:
+- `<CENTRALITY METRIC>`: The centrality metric you wish for the output CSV to be sorted by. Put in `degree_centrality`, `eigenvector_centrality`, or `betweenness_centrality`. The default is `degree_centrality`.
 
-
-__Input:__
-markers:https://matplotlib.org/stable/api/markers_api.html#module-matplotlib.markers
-
-font weight:https://matplotlib.org/stable/tutorials/text/text_props.html
-
-colours:https://matplotlib.org/stable/gallery/color/named_colors.html.
-
-### Bonus task
+__Network plotting arguments__:
+- `<NODE COLOUR>`: The colour of the nodes in the network plot. The default is `orange`.
+- `<NODE OUTLINE COLOUR>`: The colour of the outline of the nodes in the network plot. The default is `saddlebrown`.
+- `<EDGE COLOUR>`: The colour of the edges (i.e. lines between nodes) in the network plot. The default is `dimgrey`.
+    - For other colour names, see this [documentation](https://matplotlib.org/stable/gallery/color/named_colors.html).
+- `<NODE SHAPE>`: The shape of the nodes. The default is `$\u2B2C$` which is a horisontal ellipse.
+    - For different possibilities for node shapes, see the [documentation](https://matplotlib.org/stable/api/markers_api.html#module-matplotlib.markers) for matplotlib.markers.
+- `<NODE SIZE>`: The size of the nodes. The default is `2700`.
+- `<EDGE WIDTH>`: The line width of the edges. The default is `1`.
+- `<FONT SIZE>`: The font size of the node labels. The default is `8`.
+- `<FONT WEIGHT>`: The font weight of the node labels. The default is `heavy`.
+    - For different font weights, see this [documentation](https://matplotlib.org/stable/tutorials/text/text_props.html).
+- `<NODE DISTANCE>`: The distance between nodes. The default is `0.9`.
 
 
 ## 5. Discussion of results
