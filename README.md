@@ -49,13 +49,15 @@ pip install pandas numpy networkx
 ### Main task
 Make sure your current directory is the ´LANG_assignment3` folder. Then from the command line, run:
 ```
-python src/network_analysis.py (--filename <FILENAME> --directory_name <DIRECTORY NAME>) (--sort_csv_by <CENTRALITY METRIC>) (--node_color <NODE COLOUR> --edgecolors <NODE OUTLINE COLOUR> --edge_color <EDGE COLOUR> --node_shape <NODE SHAPE> --node_size <NODE SIZE> --width <EDGE WIDTH> --font_size <FONT SIZE> --font_weight <FONT WEIGHT> --node_distance <NODE DISTANCE>)
+python src/network_analysis.py (--filename <FILENAME> --directory_name <DIRECTORY NAME>) 
+(--sort_csv_by <CENTRALITY METRIC>) 
+(--node_color <NODE COLOUR> --edgecolors <NODE OUTLINE COLOUR> --edge_color <EDGE COLOUR> --node_shape <NODE SHAPE> --node_size <NODE SIZE> --width <EDGE WIDTH> --font_size <FONT SIZE> --font_weight <FONT WEIGHT> --node_distance <NODE DISTANCE>)
 ```
 
 __Data loading arguments__: Only put in one of these arguments!
-- <FILENAME>: The name of the CSV file, you want to work with, e.g. `1H4.csv`.
-- <DIRECTORY NAME>: The name of the directory of edgelists, you want to work with, e.g. `network_data`.
-  
+- `<FILENAME>`: The name of the CSV file, you want to work with, e.g. `1H4.csv`.
+- `<DIRECTORY NAME>`: The name of the directory of edgelists, you want to work with, e.g. `network_data`.
+- 
 __Data saving arguement__
 
 
