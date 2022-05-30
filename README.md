@@ -78,8 +78,7 @@ __Network plotting arguments__:
 
 
 ## 5. Discussion of results
-
-
+The final plots can be seen here. Making the `NetworkX` networks readable took some adjustment. Though this is the most readable I could make them, they are still not perfect. There are a few node labels that go outside of the nodes, and some nodes overlap. To avoid stacking and overlapping of the nodes, I set the node distance rather high (0.9), which also blurs the "clusteredness" of the network. But, the user can continue to make small adjustments to the plots by putting in different network plotting arguments to see if it is possible to make the plots more readable. And in any case, the current plots are much more readable now than in my [initial assignment](https://github.com/agnesbn/assignments-cds-lang/blob/main/assignment3/out/network_1H6.png).
 
 ![](out/plots/network_1H4.png)           |![](out/plots/network_1H6.png)
 :---------------------------------------:|:---------------------------------------:
