@@ -27,7 +27,7 @@ Your script should do the following:
 
 ## 3. Methods
 ### Main task
-The [network_analysis.py](https://github.com/agnesbn/LANG_assignment3/blob/main/src/network_analysis.py) script loads an edgelist, 
+The [network_analysis.py](https://github.com/agnesbn/LANG_assignment3/blob/main/src/network_analysis.py) script loads and reads an edgelist CSV, creates and saves network plots using `NetworkX`, and finally computes three different types of centrality metrics for the nodes (degree centrality, eigenvector centrality, and shortest-path betweenness centrality) and saves the results in a CSV. The user can choose whether to do this for a single edgelist or for all the edgelists in a directory.
 
 ### Bonus task
 Adding a number of arguments with `argparse.ArgumentParser()` allows for the user to define a number of parameters for plotting the network, such as the colour of the nodes and their outline, the colour and width of the edges, the size and shape of the nodes, font size and weight, and the distance between the nodes. I also added an argument for the user to decide what centrality metric the output CSV should be sorted by.
